@@ -79,7 +79,7 @@ class MenuView(TemplateView):
 
 
 class BlogView(TemplateView):
-    template_name = "blog.html"
+    template_name = "blog-1.html"
 
 
 class ContactView(TemplateView):
@@ -87,7 +87,7 @@ class ContactView(TemplateView):
 
 
 class SingleView(TemplateView):
-    template_name = "single-blog.html"
+    template_name = "single-blog-1.html"
 
 
 class ElementsView(TemplateView):

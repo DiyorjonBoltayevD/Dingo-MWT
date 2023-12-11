@@ -1,15 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, ListView
 from django.core.paginator import Paginator
 
 from blogapp.models import Post
 
 
-class PostView(TemplateView):
+class PostView(ListView):
     model = Post
     template_name = 'blog.html'
-    object_list = Post.objects.all()
-    extra_context = {"object_list": object_list}
+    context_objects_name = ' posts'
     pagination_by = 2
 
 
